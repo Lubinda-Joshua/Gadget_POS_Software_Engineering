@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+.git
+.github
+*.local
+pnpm-debug.log
+.env
