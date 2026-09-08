@@ -1,0 +1,196 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.98 0.005 240);
+  --foreground: oklch(0.15 0.06 253);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.06 253);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.06 253);
+  /* Navy blue primary */
+  --primary: oklch(0.20 0.085 253);
+  --primary-foreground: oklch(0.985 0 0);
+  /* Yellow accent */
+  --accent: oklch(0.87 0.175 84);
+  --accent-foreground: oklch(0.15 0.06 253);
+  --secondary: oklch(0.94 0.01 253);
+  --secondary-foreground: oklch(0.20 0.085 253);
+  --muted: oklch(0.94 0.01 253);
+  --muted-foreground: oklch(0.50 0.03 253);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.88 0.015 253);
+  --input: oklch(0.88 0.015 253);
+  --ring: oklch(0.87 0.175 84);
+  /* Charts: yellow, navy, teal, orange, purple */
+  --chart-1: oklch(0.87 0.175 84);
+  --chart-2: oklch(0.20 0.085 253);
+  --chart-3: oklch(0.60 0.118 184);
+  --chart-4: oklch(0.65 0.20 41);
+  --chart-5: oklch(0.63 0.19 303);
+  /* Sidebar: dark navy */
+  --sidebar: oklch(0.155 0.075 253);
+  --sidebar-foreground: oklch(0.92 0.01 253);
+  --sidebar-primary: oklch(0.87 0.175 84);
+  --sidebar-primary-foreground: oklch(0.15 0.06 253);
+  --sidebar-accent: oklch(0.22 0.085 253);
+  --sidebar-accent-foreground: oklch(0.92 0.01 253);
+  --sidebar-border: oklch(0.25 0.07 253);
+  --sidebar-ring: oklch(0.87 0.175 84);
+}
+
+.dark {
+  --background: oklch(0.13 0.05 253);
+  --foreground: oklch(0.93 0.01 253);
+  --card: oklch(0.17 0.06 253);
+  --card-foreground: oklch(0.93 0.01 253);
+  --popover: oklch(0.17 0.06 253);
+  --popover-foreground: oklch(0.93 0.01 253);
+  --primary: oklch(0.87 0.175 84);
+  --primary-foreground: oklch(0.15 0.06 253);
+  --accent: oklch(0.87 0.175 84);
+  --accent-foreground: oklch(0.15 0.06 253);
+  --secondary: oklch(0.22 0.07 253);
+  --secondary-foreground: oklch(0.93 0.01 253);
+  --muted: oklch(0.22 0.07 253);
+  --muted-foreground: oklch(0.60 0.03 253);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.87 0.175 84);
+  --chart-1: oklch(0.87 0.175 84);
+  --chart-2: oklch(0.55 0.12 253);
+  --chart-3: oklch(0.696 0.17 162);
+  --chart-4: oklch(0.627 0.265 303);
+  --chart-5: oklch(0.645 0.246 16);
+  --sidebar: oklch(0.10 0.045 253);
+  --sidebar-foreground: oklch(0.92 0.01 253);
+  --sidebar-primary: oklch(0.87 0.175 84);
+  --sidebar-primary-foreground: oklch(0.15 0.06 253);
+  --sidebar-accent: oklch(0.18 0.065 253);
+  --sidebar-accent-foreground: oklch(0.92 0.01 253);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.87 0.175 84);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@media print {
+  @page {
+    margin: 1.5cm;
+    size: A4 portrait;
+  }
+
+  /* Kill browser chrome scrollbars / decoration */
+  ::-webkit-scrollbar { display: none; }
+
+  html, body {
+    height: auto !important;
+    overflow: visible !important;
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Flatten the flex shell so content flows naturally on the page */
+  .print\:block     { display: block !important; }
+  .print\:h-auto    { height: auto !important; }
+  .print\:overflow-visible { overflow: visible !important; }
+
+  /* Force white/light backgrounds on cards */
+  [class*="bg-card"],
+  [class*="bg-muted"] {
+    background-color: white !important;
+  }
+
+  /* Readable muted text */
+  [class*="text-muted-foreground"] {
+    color: #555 !important;
+  }
+
+  /* Force Recharts responsive containers to render with dimensions in print */
+  .recharts-responsive-container {
+    width: 100% !important;
+    min-width: 200px !important;
+  }
+  .recharts-wrapper,
+  .recharts-surface {
+    width: 100% !important;
+  }
+
+  /* Disable Recharts clip-path animations that show placeholder icons */
+  .recharts-layer,
+  .recharts-bar-rectangles,
+  .recharts-bar-rectangle {
+    clip-path: none !important;
+  }
+
+  /* Chart bars: override CSS-variable fill to a solid printable blue */
+  .recharts-bar-rectangle path {
+    fill: #1e3a5f !important;
+  }
+
+  /* Recharts pie/legend — keep colours but ensure colour-adjust */
+  .recharts-sector { print-color-adjust: exact; }
+
+  /* Avoid breaking cards and tables mid-page */
+  .rounded-lg.border {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  tr { page-break-inside: avoid; break-inside: avoid; }
+}
